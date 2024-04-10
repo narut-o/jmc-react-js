@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,300&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+@import "features";
+@import "header";
+@import "login";
+@import "mediaquery";
+
+a {
+  text-decoration: none;
+  color: $color3;
+}
+
+.home {
+  text-align: center;
+  .heading {
+    @include styledText(2rem, 100, uppercase);
+    padding-top: 10vmax;
+  }
+
+  p {
+    margin: 2rem 0;
+    font-weight: 900;
+  }
+}
+.todosContainer {
+  @include flexBox(column, center, flex-start);
+  @include fill;
+  @include container(900px, unset, 3rem 0);
+}
+
+.todo {
+  background-color: $color2;
+  border-radius: 5px;
+
+  @include flexBox(row, center, space-between);
+  width: 100%;
+  padding: 2rem;
+  > div:last-of-type {
+    @include flexBox(row);
+  }
+
+  input {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.loader {
+  @include defaultStyle;
+  @include flexBox(column, center, center);
+  @include styledText(2rem, 100, uppercase);
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.btn {
+  @include styledText;
+  @include myButton;
+}
+.container {
+  @include defaultStyle;
+  padding: 5rem 2rem;
+  background-color: $color4;
+}
+
+.complaint{
+
+  display: flex;
+  flex-direction:row;
+  width: 60vw;
+  justify-content: space-between;
+  align-items: end;
+  margin: 2rem 0 0 ;
+ 
+  padding: 1.2rem;
+  border: 1px solid rgb(50, 50, 50);
+  border-radius: 20px 0 0 0px;
+  box-shadow: 10px 2px rgb(175, 174, 174);
+
+}
+.complaint-desc >h4{
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.complaint-desc >p{
+  font-weight: 200;
+   font-family:serif;
+}
+.complain-data{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+
+  justify-content: space-between;
+
+}
+.complain-master{
+  display: flex;
+  flex-direction: column;
+
+
+  margin-left: 2rem;
+}
+.complaint-container{
+ 
+
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2em;
+
+}
+.complaint:hover{
+  background-color: rgb(216, 216, 216);
+}
+.escalate{
+  background-color: rgb(219, 33, 33);
+  border: none;
+  border-radius: 0 0 0px 20px;
+  
+  width: 15vw;
+  height: 5vh;
+  font-size: 1.5em;
+  font-weight: 300;
+  font-family:'Roboto', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  
+  color: white;
+}
+.escalate:hover{
+  background-color: rgb(167, 31, 31);
+  cursor: pointer;
+}
+.select{
+  padding: 1em;
+  margin:  0 0px 10px 0px;
+}
+
+.image-box{
+
+  height: 80vh;
+  display: flex;
+
+  align-items: center;
+
+  border-radius: 10px;
+ 
+ margin: 2rem 0 ;
+ position:sticky;
+    top:2em;
+    left: 1em;
+    width:30vw;
+    z-index:100;
+    
+
+
+}
+.image-box>img{
+
+  height: 100%;
+  width: 100%;
+
+ object-fit: contain;
+
+ margin: 0;
+
+}
+.main-container{
+  display: flex;
+  
+  justify-content: end;
+  width: 100vw;
+  height: 100vh;
+
+
+}
+.complaints-box{
+
+  height: 100vh;
+  padding-left: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  overflow: scroll;   
+}
+.user-complaints{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.user-complaints>h2{
+  font-size: 3rem;
+
+  font-weight: 400;
+}
+.btn-box{
+
+  display: flex;
+  height: 50vh;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.btn-box>Link{
+  height: 20vh;
+  width: 30vw;
+}
+
+#active ,#resolved ,#employees{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 30vw;
+}
+.employee-main-div{
+  border: 1px solid rgba(0, 0, 0, 0.152);
+
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  align-items: start;
+  margin-top: 2rem;
+  width: 60vw;
+  align-items: center;
+}
+.employee-dep{
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+
+}
+.employee-dep>button{
+  width: 20vw;
+  margin-top: 1.2rem;
+}
+#dep-select{
+  height: 5vh;
+  font-size: 1.2rem;
+  font-weight: 300;
+  
+}
+.employee-main-div >div >h2{
+  font-size: 2rem;
+  font-weight: 300;
+
+}
+.employee-main-div >div >p{
+  font-weight: 200;
+}
+#dep-select:hover{
+  cursor: pointer;
+}
+.no-complaints{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  font-size: 3rem;
+
+
+
+
+}
+.no-complaints>h1{
+  font-weight: 100;
+}
+.user-profile{
+  display: flex;
+}
+.admin-profile{
+
+  height: 100vh;
+  width: 100vw;
+  padding: 8rem;
+}
+.admin-profile-content{
+  background-color:black;
+  height: 60vh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  
+
+}
+.admin-profile-content>h2{
+  font-size: 4rem;
+  font-weight: 100;
+  
+}
