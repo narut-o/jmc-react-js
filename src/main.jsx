@@ -5,7 +5,7 @@ import './styles/app.scss'
 
 
 
-export const server = "http://localhost:3001/api/v1";
+export const server = "https://jmc-node-js.onrender.com/api/v1";
 
 export const Context = createContext({isAuthenticated:false});
 

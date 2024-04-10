@@ -3,8 +3,9 @@ import { Context, server } from '../main'
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import Complaint from '../components/Complaint';
-import banner from '../assets/1.jpg'
 import CloudImage from '../components/CloudImage';
+
+
 const AdminHome = () => {
 
   const{isAuthenticated,user} = useContext(Context);

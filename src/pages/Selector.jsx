@@ -7,9 +7,9 @@ import Select from '@mui/material/Select';
 import { useTheme } from '@mui/material';
 
 export default function Selector({category,setCategory}) {
-  //const [category, setCategory] = React.useState('');
 
-  const theme = useTheme();
+
+
 
   const handleChange = (event) => {
     setCategory(event.target.value);

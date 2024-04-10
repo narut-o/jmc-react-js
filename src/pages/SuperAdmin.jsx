@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Context, server } from '../main'
 import { Link, Navigate } from 'react-router-dom';
-import axios from 'axios';
+
 
 const SuperAdmin = () => {
 
